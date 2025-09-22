@@ -13,7 +13,36 @@
   <property name="windowTitle">
    <string>Widget</string>
   </property>
+  <layout class="QHBoxLayout" name="horizontalLayout">
+   <item>
+    <widget class="QSpinBox" name="spinBox"/>
+   </item>
+   <item>
+    <widget class="QSlider" name="horizontalSlider">
+     <property name="orientation">
+      <enum>Qt::Orientation::Horizontal</enum>
+     </property>
+    </widget>
+   </item>
+  </layout>
  </widget>
  <resources/>
- <connections/>
+ <connections>
+  <connection>
+   <sender>spinBox</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>horizontalSlider</receiver>
+   <slot>setValue(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>459</x>
+     <y>143</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>591</x>
+     <y>156</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
 </ui>
